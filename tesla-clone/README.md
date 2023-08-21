@@ -1,1 +1,1 @@
-Tesla-clone is on going
+Tesla Clone
