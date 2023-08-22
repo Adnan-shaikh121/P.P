@@ -10,15 +10,17 @@ function Section(){
                 <p>Order Online for Touchless Delivery</p>
 
             </ItemText>
-            <ButtonGroup>
-                <LeftButton>
-                    LeftButton
-                </LeftButton>
-                <RightButton>
-                    RightButton
-                </RightButton>
-            </ButtonGroup>
-            <DownArrow src="/images/down-arrow.svg"/>
+            <Button>
+                    <ButtonGroup>
+                    <LeftButton>
+                        Custom Order
+                    </LeftButton>
+                    <RightButton>
+                        Existing Inventor
+                    </RightButton>
+                </ButtonGroup>
+                
+            </Button>
         </Wrap>
     )
 }
@@ -58,11 +60,12 @@ border-radius:100px;
 opacity:0.85;
 text-tranform:uppercase;
 font-size:12px;
-cursor:pointer;`
+cursor:pointer;
+margin:8px;
+animation : animateDown infinite 2s`
 
 
 const RightButton =styled.div`
-background-color: rgba(23, 26, 32, 0.8);
 height: 40px;
 width:256px;
 color:white;
@@ -73,9 +76,13 @@ border-radius:100px;
 opacity:0.85;
 text-tranform:uppercase;
 font-size:12px;
-cursor:pointer;`
+cursor:pointer;
+margin:8px;
+animation : animateDown infinite 2s;
+background-color: white;
+opacity: 0.68;
+color:black;`
 
-
-const DownArrow = styled.img`
-margin-top:20px;
-height:40px;`
+const Button = styled.div`
+margin-top: 400px;
+`
