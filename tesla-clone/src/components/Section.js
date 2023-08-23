@@ -53,8 +53,7 @@ margin-bottom: 30px;
 @media (max-width: 768px) {
     flex-direction: column;
     align-items: center; /* Center align buttons vertically */
-  }
-`
+  }`
 
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);
