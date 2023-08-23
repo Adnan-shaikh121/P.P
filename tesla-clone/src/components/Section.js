@@ -18,9 +18,11 @@ function Section(){
                     <RightButton>
                         Existing Inventor
                     </RightButton>
+                    
                 </ButtonGroup>
                 
             </Button>
+            
         </Wrap>
     )
 }
@@ -46,7 +48,13 @@ text-align:center;`
 
 const ButtonGroup =styled.div`
 display:flex;
-margin-bottom: 30px`
+justify-content: center;
+margin-bottom: 30px;
+@media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center; /* Center align buttons vertically */
+  }
+`
 
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);
@@ -85,4 +93,5 @@ color:black;`
 
 const Button = styled.div`
 margin-top: 400px;
+
 `
