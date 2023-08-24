@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 function Section(props){
     return(
-        <Wrap>
+        <Wrap bgImage={props.backgroundImg}>
 
             <ItemText>
                 <h1>{props.title}</h1>
@@ -35,11 +35,12 @@ width : 100vw;
 background-size:cover;
 background-position:center;
 background-repeat: no-repeat;
-background-image: url('/imagaes/model-s.jpg');
+background-image: url('/image/model-s.jpg');
 display: flex;
 flex-direction: column;
 justify-content: space-between
 align-items: center;
+background-image: ${props => `url(./imagaes/${props.bgImage})`}
 `
 
 const ItemText =styled.div`
