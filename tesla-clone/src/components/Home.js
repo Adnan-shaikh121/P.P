@@ -5,8 +5,14 @@ import Section from "./Section";
 function Home(){
     return(
         <Container>
-            <Section/>
-            <Section />
+            <Section title="Model S"
+            description="Order online for Touchness Delivery"
+            leftButoon="Custom Order"
+            rightOrder="Existing Inventor"/>
+            <Section title="Model Y"
+                description="Order online for Touchness Delivery"
+                leftButoon="Custom Order"
+                rightOrder="Existing Inventor"/>
             <Section />
             <Section />
             <Section />

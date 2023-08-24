@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components"
 
-function Section(){
+function Section(props){
     return(
         <Wrap>
 
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for Touchless Delivery</p>
+                <h1>{props.title}</h1>
+                <p>{props.description}</p>
 
             </ItemText>
             <Button>
@@ -53,7 +53,7 @@ margin-bottom: 30px;
 @media (max-width: 768px) {
     flex-direction: column;
     align-items: center; /* Center align buttons vertically */
-  }`
+  } `
 
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);
