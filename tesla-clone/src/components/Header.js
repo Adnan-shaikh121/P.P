@@ -4,7 +4,9 @@ import styled from "styled-components"
 function Header(){
     return(
         <Container>
-            Header
+            <div>
+                <img src="imagaes/logo-tesla.svg" alt=""/>
+            </div>
         </Container>
     )
 }
