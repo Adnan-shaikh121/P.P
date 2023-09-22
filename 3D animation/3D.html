@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .cube {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 5s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.7;
+            border: 1px solid black;
+        }
+
+        .front {
+            transform: translateZ(50px);
+            background: red;
+        }
+
+        .back {
+            transform: translateZ(-50px) rotateY(180deg);
+            background: blue;
+        }
+
+        .left {
+            transform: translateX(-50px) rotateY(-90deg);
+            background: green;
+        }
+
+        .right {
+            transform: translateX(50px) rotateY(90deg);
+            background: yellow;
+        }
+
+        .top {
+            transform: translateY(-50px) rotateX(90deg);
+            background: rgb(0, 204, 255);
+        }
+
+        .bottom {
+            transform: translateY(50px) rotateX(-90deg);
+            background: purple;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0) rotateY(0);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+    <title>3D Cube Animation</title>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .man-container {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+    margin: 100px auto;
+  }
+
+  .man {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    transform-style: preserve-3d;
+    animation: walk 1s infinite linear;
+  }
+
+  .body {
+    width: 50px;
+    height: 100px;
+    background-color: #333;
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+  }
+
+  .leg {
+    width: 20px;
+    height: 100px;
+    background-color: #777;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom;
+  }
+
+  .left-leg {
+    left: 20px;
+    animation: leg1 0.5s infinite alternate;
+  }
+
+  .right-leg {
+    left: 60px;
+    animation: leg2 0.5s infinite alternate;
+  }
+
+  @keyframes walk {
+    0%, 100% { transform: translateZ(0) rotateY(0); }
+    50% { transform: translateZ(10px) rotateY(10deg); }
+  }
+
+  @keyframes leg1 {
+    0%, 100% { transform: rotateX(0); }
+    50% { transform: rotateX(-60deg); }
+  }
+
+  @keyframes leg2 {
+    0%, 100% { transform: rotateX(0); }
+    50% { transform: rotateX(60deg); }
+  }
+</style>
+<title>3D Walking Man Animation</title>
+</head>
+<body>
+  <div class="man-container">
+    <div class="man">
+      <div class="body"></div>
+      <div class="leg left-leg"></div>
+      <div class="leg right-leg"></div>
+    </div>
+  </div>
+</body>
+</html>
